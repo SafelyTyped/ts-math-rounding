@@ -64,6 +64,25 @@ const roundedDownRes = roundDown(
 );
 ```
 
+## Why Another Math Rounding Package?
+
+I found myself needing rounding functions in [CSS Color](https://github.com/SafelyTyped/ts-css-color) that Javascript's stock `Math` module doesn't provide. I've published them as a separate package so that I can reuse them in other packages in the future.
+
+But this isn't the world's first package to add missing `Math` rounding functions to Javascript / Typescript ... so why have I built it?
+
+The main reason is that it follows the SafelyTyped philosophy of function parameter order:
+
+- required modifier params come first,
+- then the main input value
+
+I find that this makes partial functions a little more readable, such as:
+
+```typescript
+import { roundDown } from "@safelytyped/ts-math-rounding";
+
+const roundDown2 = (x: number) => roundDown(2, x);
+```
+
 ## Documentation
 
 Here's a link to all the documentation about this project.
