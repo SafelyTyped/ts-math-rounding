@@ -13,10 +13,23 @@ npm install @safelytyped/math-rounding
 
 ```typescript
 // add this import to your Typescript code
-import { roundDown } from "@safelytyped/math-rounding"
+import { roundDown } from "@safelytyped/math-rounding";
 ```
 
 __VS Code users:__ once you've added a single import anywhere in your project, you'll then be able to auto-import anything else that this library exports.
+
+## Exported Functions
+
+### roundDown()
+
+Use `roundDown()` to round a number down to the precision you require.
+
+```typescript
+import { roundDown } from "@safelytyped/math-rounding";
+
+// res == 1.99
+const res = roundDown(2, 1.9999);
+```
 
 ## Documentation
 
