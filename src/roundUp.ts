@@ -32,5 +32,7 @@
 // POSSIBILITY OF SUCH DAMAGE.
 //
 
-export { roundDown } from "./roundDown";
-export { roundUp } from "./roundUp";
+import { roundTo } from "./roundTo";
+
+export const roundUp =
+    (precision: number, input: number) => roundTo(Math.ceil, precision, input);

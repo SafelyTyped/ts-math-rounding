@@ -32,5 +32,35 @@
 // POSSIBILITY OF SUCH DAMAGE.
 //
 
-export { roundDown } from "./roundDown";
-export { roundUp } from "./roundUp";
+import { describe } from "mocha";
+import { roundUp } from "@safelytyped/math-rounding";
+import { expect } from "chai";
+import { TEST_DATA } from "./_fixtures/inputs";
+
+
+describe("roundUp()", () => {
+    TEST_DATA.forEach(({precision, inputValue, roundUpValue}) => {
+        it("correctly rounds down " + inputValue + " to " + precision + " decimal place(s): " + roundUpValue, () => {
+            // ----------------------------------------------------------------
+            // explain your test
+
+            // this test proves that roundUp() is working as expected
+
+            // ----------------------------------------------------------------
+            // setup your test
+
+            // for readability
+            const expectedValue = roundUpValue;
+
+            // ----------------------------------------------------------------
+            // perform the change
+
+            const actualValue = roundUp(precision, inputValue);
+
+            // ----------------------------------------------------------------
+            // test the results
+
+            expect(actualValue).to.eql(expectedValue);
+        });
+    });
+});

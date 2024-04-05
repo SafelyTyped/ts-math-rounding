@@ -32,5 +32,41 @@
 // POSSIBILITY OF SUCH DAMAGE.
 //
 
-export { roundDown } from "./roundDown";
-export { roundUp } from "./roundUp";
+export const TEST_DATA = [
+    {
+        precision: 1,
+        inputValue: 1.12,
+        roundDownValue: 1.1,
+        roundUpValue: 1.2,
+    },
+    {
+        precision: 2,
+        inputValue: 3.1415927,
+        roundDownValue: 3.14,
+        roundUpValue: 3.15,
+    },
+    {
+        precision: 1,
+        inputValue: 1.56,
+        roundDownValue: 1.5,
+        roundUpValue: 1.6,
+    },
+    {
+        precision: 1,
+        inputValue: 1.59,
+        roundDownValue: 1.5,
+        roundUpValue: 1.6,
+    },
+    {
+        precision: 0,
+        inputValue: 1.99,
+        roundDownValue: 1,
+        roundUpValue: 2,
+    },
+    {
+        precision: 2,
+        inputValue: 1.9999,
+        roundDownValue: 1.99,
+        roundUpValue: 2,
+    },
+]

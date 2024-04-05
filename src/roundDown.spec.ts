@@ -35,38 +35,11 @@
 import { describe } from "mocha";
 import { roundDown } from "@safelytyped/math-rounding";
 import { expect } from "chai";
-
-const TEST_DATA = [
-    {
-        precision: 1,
-        inputValue: 1.12,
-        expectedValue: 1.1,
-    },
-    {
-        precision: 2,
-        inputValue: 3.1415927,
-        expectedValue: 3.14,
-    },
-    {
-        precision: 1,
-        inputValue: 1.56,
-        expectedValue: 1.5,
-    },
-    {
-        precision: 1,
-        inputValue: 1.59,
-        expectedValue: 1.5,
-    },
-    {
-        precision: 0,
-        inputValue: 1.99,
-        expectedValue: 1,
-    },
-];
+import { TEST_DATA } from "./_fixtures/inputs";
 
 describe("roundDown()", () => {
-    TEST_DATA.forEach(({precision, inputValue, expectedValue}) => {
-        it("correctly rounds down " + inputValue + " to " + precision + " decimal place(s): " + expectedValue, () => {
+    TEST_DATA.forEach(({precision, inputValue, roundDownValue}) => {
+        it("correctly rounds down " + inputValue + " to " + precision + " decimal place(s): " + roundDownValue, () => {
             // ----------------------------------------------------------------
             // explain your test
 
@@ -75,7 +48,8 @@ describe("roundDown()", () => {
             // ----------------------------------------------------------------
             // setup your test
 
-            // no setup required
+            // for readability
+            const expectedValue = roundDownValue;
 
             // ----------------------------------------------------------------
             // perform the change

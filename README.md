@@ -31,6 +31,17 @@ import { roundDown } from "@safelytyped/math-rounding";
 const res = roundDown(2, 1.9999);
 ```
 
+### roundUp()
+
+Use `roundUp()` to round a number up to the precision you require.
+
+```typescript
+import { roundUp } from "@safelytyped/math-rounding";
+
+// res == 2
+const res = roundUp(2, 1.99999);
+```
+
 ## Documentation
 
 Here's a link to all the documentation about this project.

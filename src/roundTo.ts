@@ -54,7 +54,7 @@ export function roundTo(
 
     // special case - no decimal places required
     if (precision === 0) {
-        return Math.trunc(input);
+        return roundFunc(input);
     }
 
     // general case
