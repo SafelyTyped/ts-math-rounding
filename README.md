@@ -42,6 +42,28 @@ import { roundUp } from "@safelytyped/math-rounding";
 const res = roundUp(2, 1.99999);
 ```
 
+### roundTo()
+
+Use `roundTo()` if you want to inject your own rounding function.
+
+```typescript
+import { roundTo } from "@safelytyped/math-rounding";
+
+// roundedDownRes == 1.99
+const roundedDownRes = roundDown(
+    Math.trunc,
+    2,
+    1.99999
+);
+
+// roundedUpRes == 2
+const roundedDownRes = roundDown(
+    Math.ceil,
+    2,
+    1.99999
+);
+```
+
 ## Documentation
 
 Here's a link to all the documentation about this project.

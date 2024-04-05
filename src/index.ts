@@ -34,3 +34,4 @@
 
 export { roundDown } from "./roundDown";
 export { roundUp } from "./roundUp";
+export { roundTo } from "./roundTo";
