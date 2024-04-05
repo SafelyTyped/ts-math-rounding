@@ -2,7 +2,10 @@
   "name": "@safelytyped/math-rounding",
   "version": "1.0.1",
   "description": "Math rounding utilities",
-  "repository": "github:SafelyTyped/math-rounding",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SafelyTyped/math-rounding.git"
+  },
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
   "types": "lib/types/index.d.ts",
