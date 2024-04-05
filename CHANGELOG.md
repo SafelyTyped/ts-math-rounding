@@ -21,7 +21,15 @@ For each release, changes are grouped under these headings:
 
 The following changes have been completed, and will be included in the next tagged release.
 
-## v1.0.0
+### v1.0.1
+
+Released Friday 5th April 2024.
+
+### Fixes
+
+- fix bugs in CI pipeline that prevented package being published to NPMJS
+
+### v1.0.0
 
 Released Friday 5th April 2024.
 
